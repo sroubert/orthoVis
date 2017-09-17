@@ -37,6 +37,15 @@ public class forearmBend : MonoBehaviour {
 	private float handRotationX = 0f;
 	private float handRotationZ = 0f;
 	private float handRotationY = 0f;
+
+	private float handMaxX = 70f;
+	private float handMinX = -90f;
+
+	private float handMaxZ = 20f;
+	private float handMinZ = -30f;
+
+	private short timeMultiplier = 20;
+
 	private int counter = 0;
 	private Vector3 initialRotation = new Vector3(0,0,0);
 
@@ -119,14 +128,56 @@ public class forearmBend : MonoBehaviour {
 		/*-------------------------------Shoulder Movement-------------------*/
 		//-------------------------------------------------------------------//
 
-		vert= Input.GetAxis ("Vertical");
+		horz= Input.GetAxis ("Horizontal");
 
-		if (vert > 0) {
-			forearmRotationX += 10 * Time.deltaTime;
+		if (horz > 0 & forearmRotationX < forearmMaxX) {
+			forearmRotationX += timeMultiplier * Time.deltaTime;
+		} else if (horz < 0  & forearmRotationX > forearmMinX) {
+
+			forearmRotationX -= timeMultiplier * Time.deltaTime;
+
 		}
 
 
 
+
+		vert = Input.GetAxis ("Vertical");
+
+		/*-------Hand Flexion & Extension-------*/
+		//for radial and ulnar deviation, invert the Z arithmetic//
+		if (vert > 0 & 
+			handRotationX*Mathf.Cos(35) + handRotationZ*Mathf.Sin(35) < handMaxX) 
+		{
+			handRotationX += Mathf.Cos(35)*2*timeMultiplier * Time.deltaTime;
+			handRotationZ += (Mathf.Sin(35)*2*timeMultiplier)  * Time.deltaTime;
+		} else if (vert < 0 
+			& handRotationX*Mathf.Cos(35) + handRotationZ*Mathf.Sin(35) > handMinX) 
+		{
+			handRotationX -= Mathf.Cos(35)*2*timeMultiplier  * Time.deltaTime;
+			handRotationZ -= (Mathf.Sin(35)*2*timeMultiplier)  * Time.deltaTime;
+		}
+
+
+
+		//mapping 1 and 2 to radial and ulnar deviations
+		if (Input.GetButtonDown("Fire1") & 
+			-handRotationX*Mathf.Sin(35) + handRotationZ*Mathf.Cos(35) < handMaxZ) 
+		{
+			handRotationX += -Mathf.Sin(35)*timeMultiplier * Time.deltaTime;
+			handRotationZ += (Mathf.Cos(35)*timeMultiplier)  * Time.deltaTime;
+		} else if (Input.GetButtonDown("Fire2") 
+			& -handRotationX*Mathf.Sin(35) + handRotationZ*Mathf.Cos(35) > handMinZ) 
+		{
+			handRotationX -= -Mathf.Sin(35)*timeMultiplier  * Time.deltaTime;
+			handRotationZ -= (Mathf.Cos(35)*timeMultiplier)  * Time.deltaTime;
+		}
+
+
+		/*
+		if (Input.GetButtonDown("1") &
+			handRotationX*Mathf.Sin(45) - handRotationZ*Mathf.Cos(45) <handMaxZ
+		*/
+		/*
 		if (forearmRotationX < forearmMaxX) {
 
 			forearmRotationY += (90 / 135) * (10) * Time.deltaTime;
@@ -137,6 +188,7 @@ public class forearmBend : MonoBehaviour {
 		} else {
 			forearmRotationX -= 10 * Time.deltaTime;
 		}
+		*/
 
 			
 			//shoulderRotationZ -= 15 * Time.deltaTime;

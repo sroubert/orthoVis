@@ -23,7 +23,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 492}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
-  controlID: 78
+  controlID: 6760
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -123,7 +123,7 @@ MonoBehaviour:
   m_MinSize: {x: 436, y: 492}
   m_MaxSize: {x: 14006, y: 14042}
   vertical: 1
-  controlID: 79
+  controlID: 6761
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -179,14 +179,14 @@ MonoBehaviour:
     width: 964
     height: 363
   m_SceneLighting: 1
-  lastFramingTime: 3744.834379017353
+  lastFramingTime: 6361.589908003807
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.3973508, y: 0.44575977, z: 0.17405581}
+    m_Target: {x: -0.16651034, y: 0.2065692, z: 0.2668162}
     speed: 2
-    m_Value: {x: -0.3973508, y: 0.44575977, z: 0.17405581}
+    m_Value: {x: -0.16651034, y: 0.2065692, z: 0.2668162}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -209,13 +209,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.04077929, y: 0.9523936, z: -0.14716527, w: 0.26389006}
+    m_Target: {x: -0.14833012, y: 0.80682087, z: 0.22824872, w: 0.52434826}
     speed: 2
-    m_Value: {x: 0.04077904, y: 0.9523878, z: -0.14716437, w: 0.26388845}
+    m_Value: {x: -0.14833014, y: 0.8068209, z: 0.22824873, w: 0.52434826}
   m_Size:
-    m_Target: 1.9791636
+    m_Target: 1.5910921
     speed: 2
-    m_Value: 1.9791636
+    m_Value: 1.5910921
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -323,7 +323,7 @@ MonoBehaviour:
   m_MinSize: {x: 436, y: 271}
   m_MaxSize: {x: 14006, y: 10021}
   vertical: 0
-  controlID: 80
+  controlID: 6816
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -342,8 +342,8 @@ MonoBehaviour:
     y: 0
     width: 469
     height: 272
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 10}
   m_Panes:
   - {fileID: 10}
@@ -376,10 +376,10 @@ MonoBehaviour:
     width: 467
     height: 251
   m_TreeViewState:
-    scrollPos: {x: 0, y: 0}
+    scrollPos: {x: 0, y: 48}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 1afcffff00000000
+    m_ExpandedIDs: 64fbffff68fbffff6efbffff78fbffff7cfbffff86fbffff88fbffff94fbffff14fcffff1afcffff00000000b02c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -470,7 +470,7 @@ MonoBehaviour:
   m_StartGridSize: 64
   m_LastFolders: []
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: /Users/SRoubert/Desktop/testingHandsAnimation
+  m_LastProjectPath: /Users/SRoubert/Desktop/Visualizations/testingHandsAnimation
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}

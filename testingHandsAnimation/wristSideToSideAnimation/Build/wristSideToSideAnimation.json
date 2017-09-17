@@ -1,0 +1,9 @@
+{
+"TOTAL_MEMORY": 268435456,
+"dataUrl": "wristSideToSideAnimation.data.unityweb",
+"asmCodeUrl": "wristSideToSideAnimation.asm.code.unityweb",
+"asmMemoryUrl": "wristSideToSideAnimation.asm.memory.unityweb",
+"asmFrameworkUrl": "wristSideToSideAnimation.asm.framework.unityweb",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}
